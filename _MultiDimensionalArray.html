@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html lang="eng">
+    <head>
+        <!---FileName: SW#2_MultiDimensionalArray.html_Solpico-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Table Example</title>
+
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            h2{
+                color: 333;
+            }
+            table{
+                border-collapse: collapse;
+                width: 300px;
+                margin-top: 20px;
+            }
+            td,th{
+                border: 1px solid black;
+                padding: 10px;
+                text-align: center;
+            }
+            th{
+                background-color: lightblue;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Student Records</h2><!--Table Title-->
+        <table id="studentTable">
+            <tr>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+        </table>
+        <script lang="JavaScript">
+            //Declare and initialize the 2d Array of students
+            let students = [
+                    ["John", 90],
+                    ["Denise", 85]
+                     ];
+        //get the table element
+            let tableElement = document.getElementById("studentTable")
+            
+            for(indexR = 0; indexR<student.lenght;student++){//set row traversing in loop
+                let row = document.createElement("tr") //create tr element
+                for(indexC=0;indexc<student[indexR].lenght;indexC++){
+                    let cell = document.createElement("td"); //create td element
+                    cell.textContent=students[inderxR][indexC];  //assign each element from a row to a cell
+                    row.appendChild(cell); //add td with value to row
+                }
+                tableElement.appendChild("row") //add student tr to table
+            }
+
+        </script>
+    </body>
+</html>
